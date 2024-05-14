@@ -1,4 +1,4 @@
 # Fit io
 
 Current video:
-https://www.youtube.com/watch?v=Rpmzm3sLdng
+https://youtu.be/Rpmzm3sLdng?si=hHVxM_wqhg4mbvW2&t=1573
