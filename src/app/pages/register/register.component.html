@@ -1,7 +1,9 @@
-<div class="lg:w-3/12 mt-10 p-10 shadow-lg mx-auto">
+<div
+  class="sm:w-8/12 md:w-2/12 md:min-w-72 p-5 border-gray-200 bg-gray-50 border rounded-xl mx-auto mt-10"
+>
   <h3 class="text-3xl text-center font-semibold py-5">Register</h3>
 
-  <form [formGroup]="registerForm" action="" class="flex flex-col">
+  <form [formGroup]="registerForm" class="flex flex-col">
     <div class="flex flex-col mt-4 mb-1">
       <input
         formControlName="firstName"
@@ -108,11 +110,13 @@
       (click)="register()"
       class="bg-indigo-500 p-2 rounded mt-3 text-white"
     >
-      Submit
+      Register
     </button>
   </form>
   <div class="flex justify-center mt-5">
     <span>Already a Fit.io user?</span>
-    <a href="" class="text-indigo-600 ml-2 cursor-pointer">Login</a>
+    <a routerLink="/login" class="text-indigo-600 ml-2 cursor-pointer"
+      >Sign in</a
+    >
   </div>
 </div>
