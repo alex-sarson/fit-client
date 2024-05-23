@@ -1,15 +1,17 @@
 <div
-  class="sm:w-8/12 md:w-2/12 md:min-w-72 p-5 border-gray-200 bg-gray-50 border rounded-xl mx-auto mt-10"
+  class="sm:w-8/12 md:w-4/12 md:min-w-72 p-5 border-gray-200 bg-gray-50 border rounded-xl mx-auto mt-10"
 >
-  <h3 class="text-3xl text-center font-semibold py-5">Sign in to Fit.io</h3>
+  <h3 class="text-3xl text-center font-semibold py-5 text-gray-700">
+    Sign in to Fit.io
+  </h3>
 
   <form [formGroup]="loginForm" class="flex flex-col">
     <div class="flex flex-col mt-4 mb-1">
+      <label for="email" class="text-gray-500">Email address</label>
       <input
         formControlName="email"
-        class="p-2 border border-gray-300 rounded"
+        class="p-2 border border-gray-300 rounded mt-1"
         type="text"
-        placeholder="Email"
       /><span
         *ngIf="
           loginForm.hasError('required', 'email') &&
@@ -22,12 +24,15 @@
         >Invalid email address</span
       >
     </div>
-    <div class="flex flex-col mt-4 mb-1">
+    <div class="flex flex-col mt-4 mb-1 relative">
+      <a routerLink="/password-reset" class="absolute right-0 text-indigo-600"
+        >Forgot password?</a
+      >
+      <label for="password" class="text-gray-500">Password</label>
       <input
         formControlName="password"
-        class="p-2 border border-gray-300 rounded"
+        class="p-2 border border-gray-300 rounded mt-1"
         type="password"
-        placeholder="Password"
       /><span
         *ngIf="
           loginForm.hasError('required', 'password') &&
@@ -47,7 +52,7 @@
     </button>
   </form>
   <div class="flex justify-center mt-5">
-    <span>New to Fit.io?</span>
+    <span class="text-gray-700">New to Fit.io?</span>
     <a routerLink="/register" class="text-indigo-600 ml-2 cursor-pointer"
       >Create an account</a
     >
