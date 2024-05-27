@@ -3,6 +3,7 @@ import HomeComponent from './pages/home/home.component';
 import LoginComponent from './pages/login/login.component';
 import RegisterComponent from './pages/register/register.component';
 import PasswordResetComponent from './pages/password-reset/password-reset.component';
+import ResetComponent from './pages/reset/reset.component';
 
 export const routes: Routes = [
   { path: '', loadComponent: () => HomeComponent },
@@ -10,4 +11,5 @@ export const routes: Routes = [
   { path: 'login', loadComponent: () => LoginComponent },
   { path: 'register', loadComponent: () => RegisterComponent },
   { path: 'password-reset', loadComponent: () => PasswordResetComponent },
+  { path: 'reset/:token', loadComponent: () => ResetComponent },
 ];
